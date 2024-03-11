@@ -32,7 +32,41 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.maincontainer {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.education {
+  color: blue;
+  font: times;
+}
+
+#skills {
+  color: green;
+  font: 1em sans-serif;
+}
+
+.intro {
+  color: black;
+  font: calibri;
+}
+
+.contact {
+  color: purple;
+}
+
+.github {
+  color: red;
+}
+
+.scenery {
+  margin-top: 10px;
 }

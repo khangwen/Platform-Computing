@@ -1,6 +1,19 @@
 import './App.css';
 
 function App() {
+  let cntr = 0;
+  const newPageUrl = "https://github.com/khangwen";
+
+  const clickEvent = () => {
+    cntr++;
+    // let text = "Clicked " + cntr + " times!";
+    window.open(newPageUrl, "_blank")
+    // console.log("You clicked the button " + cntr + " times!");
+    // document.getElementsByClassName("button")[0].style.backgroundColor = "red";
+    // document.getElementsByClassName("button")[0].textContent = "Clicked!";
+    // alert("You clicked the button!");
+  }
+
   return (
     <div class="maincontainer">
       <header>
@@ -35,11 +48,13 @@ function App() {
 
       <div class="github">
         <h2>github.</h2>
-        <p>My GitHub is:</p>
-        <a href="https://github.com/khangwen">khangwen</a>
+        <button type="button" className="button" onClick={clickEvent}>Click Here For My Github!</button>
       </div>
 
       <img src="/scenery.jpg" alt="scenery" class="scenery" />
+
+
+
     </div>
   );
 }

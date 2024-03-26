@@ -22,8 +22,11 @@ The following **bonus** features are implemented:
 
 ## Screenshot and/or Video Walkthrough
 
-<img src="https://imgur.com/gallery/4rAXx5x" title='Example Video Walkthrough' width='' alt='Example Video Walkthrough' />
-
+<img src="Images/sql_murderer.png" title='Output1' width='' alt='Output1' />
+<img src="Images/sql_mastermind.png" title='Output2' width='' alt='Output2' />
+<img src="Images/mongodb_interactive.png" title='Output3' width='' alt='Output3' />
+<img src="Images/mongodb_setup.png" title='Output4' width='' alt='Output4' />
+<img src="Images/metrics_output.png" title='Output5' width='' alt='Output5' />
 
 ## Notes:
 PROVIDE RELEVANT OR ADDITIONAL INFORMATION HERE. Below are formatting options to add emphasis in text

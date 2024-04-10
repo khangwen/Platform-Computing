@@ -9,7 +9,7 @@ from selenium.common.exceptions import NoSuchElementException
 driver = webdriver.Firefox()
 
 # Install extensions
-ublock_PATH = "C:\\Users\\lenovo\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\8w1j97j1.default-release\\extensions\\uBlock0@raymondhill.net.xpi"
+ublock_PATH = "Addons/uBlock0@raymondhill.net.xpi"
 driver.install_addon(ublock_PATH, temporary=True)
 
 # Navigate to your website

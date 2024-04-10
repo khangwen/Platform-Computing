@@ -3,6 +3,7 @@ import time
 import urllib.request
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
 
 # Initialize browser
 driver = webdriver.Firefox()
@@ -12,8 +13,9 @@ ublock_PATH = "C:\\Users\\lenovo\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\
 driver.install_addon(ublock_PATH, temporary=True)
 
 # Navigate to your website
-website_URL = "https://www.prydwen.gg/star-rail/characters" 
-driver.get(website_URL)
+website_URL = "https://www.prydwen.gg/star-rail/characters"
+website_URL2 = "https://www.csusb.edu/" 
+driver.get(website_URL) # change testing website here
 
 # Track presence time 
 start_time = time.time()
@@ -35,21 +37,26 @@ def get_Elements():
         time.sleep(2)
 
     # Find link
-    link = driver.find_element(By.XPATH,"//a[@href='/star-rail/characters/acheron']")
-    link_name = ""
+    try:
+        link = driver.find_element(By.XPATH,"//a[@href='/star-rail/characters/acheron']")
+        link_name = ""
 
-    # Click on link
-    link_name = link.get_attribute("href")
-    print(link_name)
+        # Click on link
+        link_name = link.get_attribute("href")
+        print(link_name)
 
-    print("Found link. Redirecting...")
-    driver.execute_script("arguments[0].click();", link)
-    time.sleep(2)
+        print("Found link. Redirecting...")
+        driver.execute_script("arguments[0].click();", link)
+        time.sleep(2)
 
-    # Show all tabs
-    driver.execute_script("document.getElementsByClassName('tab-inside')[2].style.display='block';")
-    print("Showing third tab...")
-    time.sleep(2)
+        # Show all tabs
+        driver.execute_script("document.getElementsByClassName('tab-inside')[2].style.display='block';")
+        print("Showing third tab...")
+        time.sleep(2)
+    except NoSuchElementException:
+        print("No link found. Terminating current task...")
+        time.sleep(2)
+        pass
 
     # Find images
     images = driver.find_elements(by=By.TAG_NAME, value="img")
